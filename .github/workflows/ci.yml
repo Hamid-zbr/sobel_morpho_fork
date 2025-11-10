@@ -7,6 +7,8 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
+            - name : installer les dépendances
+              run: sudo apt-get install libsdl2-dev libsdl2-ttf-dev
             - name: checkout code
               uses: actions/checkout@v4
             - name: compiler et exécuter le code
